@@ -28,6 +28,10 @@
     import { useStore } from '../store/index.ts'
 
     export default {
+        setup() {
+            const store = useStore()
+            return { store }
+        },
         data() {
             return {
                 otp: Array(6).fill(''),
@@ -55,10 +59,6 @@
                 this.store.increment()
                 console.log('New Count:', this.store.count)
             },
-        },
-        setup() {
-            const store = useStore()
-            return { store }
         },
         computed: {
             // same as reading from store.count
