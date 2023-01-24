@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'DB HelvethaicaMon X 78 BdCondIt';
+    src: url('DBHelvethaicaMonX-78BdCondIt.woff2') format('woff2'),
+        url('DBHelvethaicaMonX-78BdCondIt.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DB HelvethaicaMon X 85 Blk';
+    src: url('DBHelvethaicaMonX-85Blk.woff2') format('woff2'),
+        url('DBHelvethaicaMonX-85Blk.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
