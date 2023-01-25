@@ -1,4 +1,4 @@
-@import "./assets/fonts/style.css";
+@import './assets/fonts/style.css';
 
 body {
     margin: 0;
@@ -6,27 +6,26 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    
 }
 #app {
-    font-family: "DB HelvethaicaMon X 78 BdCondIt", serif;
+    font-family: 'DB HelvethaicaMon X 78 BdCondIt', serif;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
 
 .input-standard {
-  @apply w-full h-9 rounded-full py-3 px-4
+    @apply w-full h-9 rounded-full py-3 px-4;
 }
 .button-standard {
-  @apply w-full h-9 rounded-full 
+    @apply w-full h-9 rounded-full;
 }
 .input-error {
-  @apply text-gray-700 rounded-full py-0 px-0 block w-full leading-5 border border-red-500 bg-red-300 ;
+    @apply text-gray-700 rounded-full py-0 px-0 block w-full leading-5 border border-red-500 bg-red-300;
 }
-.boxshadow { 
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.boxshadow {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 @tailwind base;
 @tailwind components;
