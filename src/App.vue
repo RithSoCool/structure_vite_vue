@@ -1,19 +1,17 @@
-<script setup lang="ts"></script>
-
 <template>
-    <router-view></router-view>
+    <div>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/register-moblie">register</router-link>
+    </div>
+    <router-view v-slot="{ Component, route }">
+        <FadeInOut
+            :entry="route.meta.entry || 'center'"
+            :exit="route.meta.entry || 'center'"
+            :duration="route.meta.duration || 500"
+            mode="out-in"
+        >
+            <component :is="Component" />
+        </FadeInOut>
+    </router-view>
 </template>
-
-<style scoped>
-    .logo {
-        height: 6em;
-        padding: 1.5em;
-        will-change: filter;
-    }
-    .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-    }
-    .logo.vue:hover {
-        filter: drop-shadow(0 0 2em #42b883aa);
-    }
-</style>
+<script></script>

@@ -16,7 +16,8 @@
         "vant": "^4.0.8",
         "vue": "^3.2.45",
         "vue-eslint-parser": "^9.1.0",
-        "vue-router": "^4.1.6"
+        "vue-router": "^4.1.6",
+        "vue3-transitions": "^1.0.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.49.0",
