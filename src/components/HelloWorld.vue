@@ -104,7 +104,6 @@
             }
             const incrementAndPrint = () => {
                 store.increment()
-                console.log('New Count:', store.count)
             }
 
             const count = computed(() => store.count)

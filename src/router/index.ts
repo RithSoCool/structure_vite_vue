@@ -38,14 +38,29 @@ const routes = [
             {
                 path: '/main/profile',
                 component: ProfilePage,
+                name: 'profile',
+                meta: {
+                    title: 'โปรไฟล์',
+                    show: true,
+                },
             },
             {
                 path: '/main/point',
                 component: PointPage,
+                name: 'point',
+                meta: {
+                    title: 'สะสมคะแนน',
+                    show: true,
+                },
             },
             {
                 path: '',
                 component: MainPage,
+                name: 'main',
+                meta: {
+                    title: 'หน้าหลัก',
+                    show: true,
+                },
             },
         ],
     },
