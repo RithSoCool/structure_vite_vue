@@ -2,6 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HelloWorldVue from '../components/HelloWorld.vue'
 import RegisterMobile from '../views/register/RegisterMobile.vue'
+import MainTab from '../views/main/MainTab.vue'
+import MainPage from '../views/main/MainPage.vue'
+import PointPage from '../views/main/PointPage.vue'
+import ProfilePage from '../views/main/ProfilePage.vue'
 import HomePage from '../views/homepage/HomepageList.vue'
 
 const routes = [

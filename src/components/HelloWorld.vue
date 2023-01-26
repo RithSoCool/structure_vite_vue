@@ -60,7 +60,7 @@
         </div>
         <PopUpAlert :show="show">
             <template v-slot:content>
-                <h1>This is content {{  show }}</h1>
+                <h1>This is content {{ show }}</h1>
                 <router-link to="/register-moblie">go to Register</router-link>
             </template>
         </PopUpAlert>
@@ -80,7 +80,7 @@
             const store = useStore()
             const otp = ref<string[]>(Array(6).fill(''))
             const focusedIndex = ref<number>(-1)
-            const show = ref(false);
+            const show = ref(false)
             const showPopup = () => {
                 show.value = !show.value
             }
@@ -104,7 +104,6 @@
             }
             const incrementAndPrint = () => {
                 store.increment()
-                console.log('New Count:', store.count)
             }
 
             const count = computed(() => store.count)
