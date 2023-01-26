@@ -4,12 +4,15 @@
             <div class="tabbar w-full bg-green-400">
                 <div class="tabbar-item" @click="pageMain()">
                     <p class="text-gray-800">หน้่าหลัก</p>
+                    <p v-if="tabIndex === 1">{{ tabIndex }}</p>
                 </div>
                 <div class="tabbar-item" @click="pagePoint()">
                     <p class="text-gray-800">สะสมคะแนน</p>
+                    <p v-if="tabIndex === 2">{{ tabIndex }}</p>
                 </div>
                 <div class="tabbar-item" @click="pageProfile()">
                     <p class="text-gray-800">โปรไฟล์</p>
+                    <p v-if="tabIndex === 3">{{ tabIndex }}</p>
                 </div>
             </div>
         </div>
@@ -28,19 +31,25 @@
 
 <script>
     import { useRouter } from 'vue-router'
+    import { ref } from 'vue'
     export default {
         setup() {
             const router = useRouter()
+            const tabIndex = ref(1)
             const pageMain = () => {
                 router.push({ path: '/main' })
-            }
-            const pageProfile = () => {
-                router.push({ path: '/main/profile' })
+                tabIndex.value = 1
             }
             const pagePoint = () => {
                 router.push({ path: '/main/point' })
+                tabIndex.value = 2
             }
-            return { pageMain, pagePoint, pageProfile }
+            const pageProfile = () => {
+                router.push({ path: '/main/profile' })
+                tabIndex.value = 3
+            }
+
+            return { pageMain, pagePoint, pageProfile, tabIndex }
         },
     }
 </script>
