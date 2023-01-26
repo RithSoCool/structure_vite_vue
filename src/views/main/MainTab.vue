@@ -13,49 +13,57 @@
                 </div>
             </div>
         </div>
-        <router-view></router-view>
+        <router-view v-slot="{ Component, route }">
+            <FadeInOut
+                :entry="route.meta.entry || 'center'"
+                :exit="route.meta.entry || 'center'"
+                :duration="route.meta.duration || 500"
+                mode="out-in"
+            >
+                <component :is="Component" />
+            </FadeInOut>
+        </router-view>
     </div>
 </template>
 
 <script>
     import { useRouter } from 'vue-router'
     export default {
-        setup () {
-            const router = useRouter();
+        setup() {
+            const router = useRouter()
             const pageMain = () => {
-                router.push({path : '/main/mainpage'})
+                router.push({ path: '/main' })
             }
             const pageProfile = () => {
-                router.push({path : '/main/point'})
-            } 
-            const pagePoint = () => {
-                router.push({path : '/main/profile'})
+                router.push({ path: '/main/profile' })
             }
-            return { pageMain , pagePoint , pageProfile }
-        }
+            const pagePoint = () => {
+                router.push({ path: '/main/point' })
+            }
+            return { pageMain, pagePoint, pageProfile }
+        },
     }
 </script>
 
 <style lang="scss" scoped>
- .tabbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 0;
-  /* background-color: #fff; */
-  box-shadow: 0 -1px 0 #edf2f7 inset;
-}
+    .tabbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        box-shadow: 0 -1px 0 #edf2f7 inset;
+    }
 
-.tabbar-item {
-  flex: 1;
-  text-align: center;
-}
+    .tabbar-item {
+        flex: 1;
+        text-align: center;
+    }
 
-.tabbar-item p {
-  display: inline-block;
-  padding: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #4a5568;
-}
+    .tabbar-item p {
+        display: inline-block;
+        padding: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: #4a5568;
+    }
 </style>

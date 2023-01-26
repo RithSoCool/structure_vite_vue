@@ -1,20 +1,18 @@
 <template>
     <div>
-        <van-popup 
+        <van-popup
             class="flex justify-center"
-            v-model:show="isShowing" closeable round :style="{ padding: '12px' , minHeight: '200px' , minWidth : '300px' ,overflowY: 'visible'}">
+            v-model:show="isShowing"
+            closeable
+            round
+            :style="{ padding: '12px', minHeight: '200px', minWidth: '300px', overflowY: 'visible' }"
+        >
             <!-- icon success -->
-            <div class="absolute -top-10 h-20 w-20 rounded-full bg-white">
-
-            </div>
+            <div class="absolute -top-10 h-20 w-20 rounded-full bg-white"></div>
             <!-- icon left -->
-            <div class="absolute -bottom-3 left-0 h-20 w-20 rounded-full bg-white">
-
-            </div>
+            <div class="absolute -bottom-3 left-0 h-20 w-20 rounded-full bg-white"></div>
             <!-- icon right -->
-            <div class="absolute -bottom-3 right-0 h-20 w-20 rounded-full bg-white">
-
-            </div>
+            <div class="absolute -bottom-3 right-0 h-20 w-20 rounded-full bg-white"></div>
             <!-- content -->
             <div class="pt-7 w-full">
                 <content>
@@ -26,7 +24,7 @@
 </template>
 
 <script lang="ts">
-    import { ref , watch , toRefs } from 'vue'
+    import { ref, watch, toRefs } from 'vue'
 
     export default {
         props: ['show'],
@@ -38,7 +36,7 @@
             })
             return {
                 show,
-                isShowing
+                isShowing,
             }
         },
     }
