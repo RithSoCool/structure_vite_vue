@@ -2,14 +2,27 @@
     <p>กรอกเบอร์มือถือ เพื่อรับรหัส OTP</p>
     <label for="phone"> เบอร์มือถือ </label>
     <input type="tel" id="phone" v-model="phoneNumber" @input="onNumberInput($event)" />
-    <button :disabled="phoneNumber.length != 10" @click="handleClickSendOTP">รับรหัส OTP</button>
+    <button :disabled="phoneNumber.length < 10" @click="handleClickSendOTP()">รับรหัส OTP</button>
+    <router-view v-slot="{ Component, route }">
+        <FadeInOut
+            :entry="route.meta.entry || 'center'"
+            :exit="route.meta.entry || 'center'"
+            :duration="route.meta.duration || 500"
+            mode="out-in"
+        >
+            <component :is="Component" />
+        </FadeInOut>
+    </router-view>
 </template>
 <script lang="ts">
     import { ref } from 'vue'
+    import { useRouter } from 'vue-router'
+
     export default {
         setup(props) {
             const phoneNumber = ref<string>('')
             const phoneNumberLength = ref<number>(10)
+            const router = useRouter()
 
             const onNumberInput = (inputData) => {
                 inputData.target.value = inputData.target.value.replaceAll(/\D/g, '') //only input number
@@ -19,8 +32,8 @@
             }
 
             const handleClickSendOTP = () => {
-                console.log('🚀 ~ file: RegisterMobile.vue:27 ~ handleClickSendOTP ~ handleClickSendOTP')
-                alert('test sending OTP')
+                // alert('test sending OTP')
+                router.push({ path: '/register-verify-otp' })
             }
 
             return { phoneNumber, onNumberInput, handleClickSendOTP }

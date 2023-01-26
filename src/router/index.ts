@@ -6,6 +6,7 @@ import MainTab from '../views/main/MainTab.vue'
 import PointPage from '../views/main/PointPage.vue'
 import ProfilePage from '../views/main/ProfilePage.vue'
 import RegisterMobile from '../views/register/RegisterMobile.vue'
+import RegisterOTP from '../views/register/RegisterOTP.vue'
 
 const routes = [
     {
@@ -24,7 +25,16 @@ const routes = [
         name: 'Register Mobile',
         meta: {
             entry: 'center',
-            exit: 'right',
+            exit: 'center',
+        },
+    },
+    {
+        path: '/register-verify-otp',
+        component: RegisterOTP,
+        name: 'Register OTP',
+        meta: {
+            entry: 'center',
+            exit: 'center',
         },
     },
     {
