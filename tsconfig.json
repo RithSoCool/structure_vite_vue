@@ -13,7 +13,7 @@
         "lib": ["ESNext", "DOM"],
         "skipLibCheck": true,
         "noEmit": true,
-        "types": ["vite/client"],
+        "types": ["vitest/globals"],
         "paths": {
             "@/*": ["./src/*"]
         }
