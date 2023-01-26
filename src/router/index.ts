@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HelloWorldVue from '../components/HelloWorld.vue'
 import { main } from './main'
 import { register } from './register'
+import { profile } from './profile'
 
 const routes = [
     {
@@ -17,6 +18,7 @@ const routes = [
     },
     ...main,
     ...register,
+    ...profile
 ]
 
 export default createRouter({
