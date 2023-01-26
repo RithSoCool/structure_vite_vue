@@ -10,9 +10,11 @@
         "format": "prettier --write .",
         "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue",
         "test": "vitest",
+        "test:ui": "vitest --ui --api 1337",
         "coverage": "vitest run --coverage"
     },
     "dependencies": {
+        "@vitest/ui": "^0.28.2",
         "axios": "^1.2.3",
         "pinia": "^2.0.29",
         "vant": "^4.0.8",
