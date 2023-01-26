@@ -96,7 +96,7 @@
                     // this.$refs['input' + (currentIndex + 1)][0].focus()
                 }
             }
-            const autoFocusPrevious = (currentIndex: number) => {
+            const autoFocusPrevious = (currentIndex: number)  => {
                 if (otp.value[currentIndex - 1].length === 0) {
                     document.getElementById('input' + (currentIndex - 1))?.focus()
                     // this.$refs['input' + (currentIndex - 1)][0].focus()

@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <!-- <div>
         <router-link to="/">Home</router-link> |
         <router-link to="/register-moblie">register</router-link>
-    </div>
+    </div> -->
     <router-view v-slot="{ Component, route }">
         <FadeInOut
             :entry="route.meta.entry || 'center'"
