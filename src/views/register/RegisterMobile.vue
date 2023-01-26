@@ -19,9 +19,8 @@
             }
 
             const handleClickSendOTP = () => {
-                console.log("🚀 ~ file: RegisterMobile.vue:27 ~ handleClickSendOTP ~ handleClickSendOTP")
+                console.log('🚀 ~ file: RegisterMobile.vue:27 ~ handleClickSendOTP ~ handleClickSendOTP')
                 alert('test sending OTP')
-
             }
 
             return { phoneNumber, onNumberInput, handleClickSendOTP }
