@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HelloWorldVue from '../components/HelloWorld.vue'
 import RegisterMobile from '../views/register/RegisterMobile.vue'
-import HomePage from '../views/homepage/Homepage.vue'
+import HomePage from '../views/homepage/HomepageList.vue'
 
 const routes = [
     {
@@ -30,7 +30,7 @@ const routes = [
         name: 'Home Page',
         meta: {
             entry: 'center',
-            exit: 'right',
+            exit: 'left',
         },
     },
 ]

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/register-moblie">register</router-link>
+        <router-link to="/">Home</router-link> | <router-link to="/register-moblie">register</router-link> |
+        <router-link to="/home-page">homepage</router-link>
     </div>
     <router-view v-slot="{ Component, route }">
         <FadeInOut

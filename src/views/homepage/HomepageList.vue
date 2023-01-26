@@ -1,12 +1,16 @@
 <template>
     <div class="position:absolute w-full h-full">
         this is homepage pages
+
         <div class="w-full h-full homepage-background-container">
-            <div class="maintainance-img">
+            <div class="">
                 <img class="w-full bg-white" :src="mockBg" alt="" />
             </div>
             <div class="w-full h-full homepage-list-container">
-                <van-button round class="test">อันดับของคุณ</van-button>
+                <button class="rounded-full text-white my-4 bg-red-800 w-[90px] h-[30px]">อันดับของคุณ</button>
+                <div>test</div>
+                <button class="rounded-full text-white my-4 bg-lime-600 w-[90px] h-[30px]">Top Spender</button>
+                <homepage-item></homepage-item>
             </div>
         </div>
     </div>
@@ -14,7 +18,12 @@
 
 <script lang="ts">
     import mockBg from '../../assets/image/homepage/mock-bg.png'
+    import HomepageItem from '../homepage/components/HomepageItem.vue'
     export default {
+        components: { HomepageItem },
+        component: {
+            HomepageItem,
+        },
         setup(props) {
             return {
                 mockBg,
@@ -25,7 +34,6 @@
 
 <style>
     .homepage-list-container {
-        background-color: var(--bg-gray);
         overflow-y: scroll;
         position: relative;
         scroll-behavior: smooth;
@@ -37,9 +45,5 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .test {
-        /* @apply bg-red-800 boxshadow; */
-        @apply bg-red-800 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)];
     }
 </style>
