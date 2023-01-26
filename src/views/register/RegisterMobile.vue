@@ -33,7 +33,7 @@
 
             const handleClickSendOTP = () => {
                 // alert('test sending OTP')
-                router.push({ path: '/register-verify-otp' })
+                router.push({ path: '/register/verify-otp' })
             }
 
             return { phoneNumber, onNumberInput, handleClickSendOTP }
