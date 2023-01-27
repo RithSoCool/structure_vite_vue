@@ -3,6 +3,7 @@ import HelloWorldVue from '../components/HelloWorld.vue'
 import { main } from './main'
 import { register } from './register'
 import { homepage } from './homepage'
+import { uploadReceipt } from './upload-receipt'
 
 const routes = [
     {
@@ -18,6 +19,7 @@ const routes = [
     ...main,
     ...register,
     ...homepage,
+    ...uploadReceipt,
 ]
 
 export default createRouter({
