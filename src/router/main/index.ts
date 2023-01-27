@@ -38,7 +38,7 @@ export const main = [
                 name: 'main',
                 meta: {
                     title: 'หน้าหลัก',
-                    show: true,
+                    show: false,
                 },
             },
         ],

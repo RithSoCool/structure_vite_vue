@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full h-full layout-content">
+    <div class="relative w-full h-full main-layout-content pt-2">
         <div class="w-full h-full homepage-background-container">
             <!-- <div class="">
                 <img class="w-full bg-white" :src="mockBg" alt="" />
