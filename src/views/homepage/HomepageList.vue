@@ -1,10 +1,13 @@
 <template>
-    <div class="relative w-full h-full">
+    <div class="relative w-full h-full layout-content">
         <div class="w-full h-full homepage-background-container">
-            <div class="">
+            <!-- <div class="">
                 <img class="w-full bg-white" :src="mockBg" alt="" />
-            </div>
+            </div> -->
             <div class="w-full h-full homepage-list-container">
+                <div class="">
+                    <img class="w-full bg-white" :src="mockBg" alt="" />
+                </div>
                 <button class="rounded-full text-white my-4 bg-red-800 w-[90px] h-[30px]">อันดับของคุณ</button>
                 <MyUserItem />
                 <button class="rounded-full text-white my-4 bg-lime-600 w-[90px] h-[30px]">Top Spender</button>
