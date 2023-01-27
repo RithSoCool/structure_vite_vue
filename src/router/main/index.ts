@@ -3,7 +3,7 @@ import MainTab from '../../views/main/MainTab.vue'
 import PointPage from '../../views/main/PointPage.vue'
 import ProfilePage from '../../views/main/ProfilePage.vue'
 
-export const main =[
+export const main = [
     {
         path: '/main',
         component: MainTab,

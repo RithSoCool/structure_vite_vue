@@ -1,7 +1,5 @@
 <template>
     <div class="relative w-full h-full">
-        this is homepage pages
-
         <div class="w-full h-full homepage-background-container">
             <div class="">
                 <img class="w-full bg-white" :src="mockBg" alt="" />
@@ -11,6 +9,13 @@
                 <MyUserItem />
                 <button class="rounded-full text-white my-4 bg-lime-600 w-[90px] h-[30px]">Top Spender</button>
                 <homepage-item v-for="item in userList" :key="item.rank" :userObj="item" />
+                <div class="homepage-footer py-4">
+                    <div class="homepage-footer-text">
+                        ติดตามรายละเอียดเพิ่มเติมได้ `${img}` <br />
+                        #D7 #D7Thailand #D7คอมบูชะ
+                    </div>
+                    <div class="homepage-footer-text-link underline text-lime-700">รายละเอียดกิจกรรม</div>
+                </div>
             </div>
         </div>
     </div>
