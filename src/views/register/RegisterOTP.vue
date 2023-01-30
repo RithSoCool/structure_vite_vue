@@ -77,7 +77,7 @@
                 console.log('🚀 ~ file: RegisterOTP.vue:77 ~ watch ~ newOTP', otp)
 
                 if (otp.value.filter((n) => n == '').length == 0) {
-                    router.push({ path: 'register/profile' })
+                    router.push({ path: '/register/profile' })
                 }
 
                 return null
