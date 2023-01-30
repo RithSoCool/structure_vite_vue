@@ -14,8 +14,18 @@ body {
     padding: 0 1rem;
     text-align: center;
     width: 100%;
-    position: relative;
+    // position: relative;
     background-color: #fbeec2;
+    height: 100%;
+    position: fixed;
+    font-size: 18px;
+}
+.main-layout-content {
+    position: relative !important;
+    height: -moz-calc(100vh - 60px) !important;
+    height: -webkit-calc(100vh - 60px) !important;
+    height: calc(100vh - 60px) !important;
+    overflow-y: auto;
 }
 
 .input-standard {
