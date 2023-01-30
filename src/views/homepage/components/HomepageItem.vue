@@ -1,6 +1,6 @@
 <template>
     <div class="top-spender-container pt-4">
-        <div class="bg-white rounded-full w-5/6 flex justify-between px-4 py-2 items-center">
+        <div class="bg-white rounded-full w-full flex justify-between px-4 py-2 items-center">
             <div class="flex items-center">
                 <div class="bg-red-800 text-white rounded-full w-[35px] h-[35px] mr-4 flex justify-center items-center">
                     {{ userObj.rank }}

@@ -2,6 +2,7 @@ import MainPage from '../../views/main/MainPage.vue'
 import MainTab from '../../views/main/MainTab.vue'
 import PointPage from '../../views/main/PointPage.vue'
 import ProfilePage from '../../views/main/ProfilePage.vue'
+import HomepagePage from '../../views/homepage/HomepageList.vue'
 
 export const main = [
     {
@@ -33,11 +34,11 @@ export const main = [
             },
             {
                 path: '',
-                component: MainPage,
+                component: HomepagePage,
                 name: 'main',
                 meta: {
                     title: 'หน้าหลัก',
-                    show: true,
+                    show: false,
                 },
             },
         ],
